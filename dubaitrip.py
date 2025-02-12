@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-client = OpenAI()
+client = OpenAI(DEEPSEEK_API_KEY,BASE_URL)
 def chat_bot(message):
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
